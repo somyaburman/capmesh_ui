@@ -1,0 +1,759 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<div class="container">
+
+    <div id="viewProfile" class="alert ">
+        <div class="card">
+            <div class="card card-image" style="background-image: url(../assets/backg.jpg); width:100% ; height:200px"> </div>
+            
+            <div id="header" class="card-header">
+                <button type="button" class="btn btn-default btn-sm" class="btn pull-right">
+          <span class="glyphicon glyphicon-pencil" ></span>
+        </button>
+                <img id="displayPicture" src="./assets/Koala.jpg" alt="Avatar">
+                <p id="pdetail"> <br>
+                    <br>
+                   <br>
+                    <span><h3>Name</h3></span>
+                    <span>Bio</span><br>
+                    <span>email,mobile</span><br>
+                    <span>DOB</span><br>
+                    <span>gender</span><br>
+                </p>
+            </div>
+        </div>
+        
+    </div>
+
+    <div id="experience" class="alert ">
+
+        <h3>
+            Experience
+
+            <span><a href="#myModal" class="btn btn-default btn-sm" class="btn pull-right" data-toggle="modal">
+          <span class="glyphicon glyphicon-plus" ></span></a>
+            </span>
+        </h3>
+        <!-- Modal -->
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <!--<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog"> -->
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header" style="padding:35px 50px;">
+
+                        <h2 class="modal-title"><b>Add Experience</b>
+
+                        </h2>
+
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <h4>
+                                    <label for="recipient-name" class="form-control-label">Designation</label>
+                                    <input type="text" class="form-control" id="desId" value="">
+                                </h4>
+                            </div>
+
+                            <div class="form-group">
+                                <h4>
+                                    <label for="recipient-name" class="form-control-label">Company Name</label>
+                                    <input type="text" class="form-control" id="comId" value="">
+                                </h4>
+                            </div>
+
+                            <div class="form-group">
+                                <h4>
+                                    <label for="recipient-name" class="form-control-label">Time period</label>
+                                    <input type="text" class="form-control" id="timeName" value="">
+                                </h4>
+                            </div>
+
+                        </form>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success" data-dismiss="submit">Save</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+        <div class="card">
+            <div id="body" class="card-body">
+
+                <p>
+                    <a href="#">
+                    <img id="companyLogo" border="0" src="./assets/Koala.jpg" width="100" height="100">
+                    </a>
+                </p>
+                <div id="cname">
+                    <h3>Company Name
+                        <span>
+                        <button type="button" data-target="#myModaleditExp" class="btn btn-default btn-sm" class="btn pull-right" data-toggle="modal">
+          <span class="glyphicon glyphicon-pencil"></span>
+                        </button>
+                        </span>
+                    </h3>
+                    <div class="modal fade" id="myModaleditExp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <!--<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog"> -->
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header" style="padding:35px 50px;">
+
+                                    <h2 class="modal-title"><b>Update Experience</b>
+
+                                    </h2>
+
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <h4>
+                                                <label for="recipient-name" class="form-control-label">Designation</label>
+                                                <input type="text" class="form-control" id="desId" value="">
+                                            </h4>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <h4>
+                                                <label for="recipient-name" class="form-control-label">Company Name</label>
+                                                <input type="text" class="form-control" id="comId" value="">
+                                            </h4>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <h4>
+                                                <label for="recipient-name" class="form-control-label">Time period</label>
+                                                <input type="text" class="form-control" id="timeName" value="">
+                                            </h4>
+                                        </div>
+
+                                    </form>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-success" data-dismiss="submit">Save Changes</button>
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <span class="visually-hidden">designation</span>
+                    <span>Designation</span><br>
+
+                    <span>Time Period</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--    --------------------Education------------------------------ -->
+
+    <div id="education" class="alert ">
+        <h3>
+            Education
+            <span><a href="#myModalEdu" class="btn btn-default btn-sm" class="btn pull-right" data-toggle="modal">
+          <span class="glyphicon glyphicon-plus" ></span></a>
+            </span>
+        </h3>
+
+        <!-- Modal -->
+        <div class="modal fade" id="myModalEdu" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <!--<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog"> -->
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header" style="padding:35px 50px;">
+
+                        <h2 class="modal-title"><b>Add Education</b>
+
+                        </h2>
+
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <h4>
+                                    <label for="recipient-name" class="form-control-label">Degree Name</label>
+                                    <input type="text" class="form-control" id="degId" value="" required>
+                                </h4>
+                            </div>
+
+                            <div class="form-group">
+                                <h4>
+                                    <label for="recipient-name" class="form-control-label">University</label>
+                                    <input type="text" class="form-control" id="uniId" value="" required>
+                                </h4>
+                            </div>
+
+                            <div class="form-group">
+                                <h4>
+                                    <label for="recipient-name" class="form-control-label">Percentage</label>
+                                    <input type="text" class="form-control" id="perId" value="" required>
+                                </h4>
+                            </div>
+
+                            <div class="form-group">
+                                <h4>
+                                    <label for="recipient-name" class="form-control-label">Year of passing</label>
+                                    <input type="number" class="form-control" id="yearId" value="" required>
+                                </h4>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-success" data-dismiss="submit">Save</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    </div>
+
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="card">
+            <div id="body" class="card-body">
+
+                <p>
+                    <a href="#">
+                    <img id="uniLogo" border="0" src="./assets/Koala.jpg" width="100" height="100">
+                    </a>
+                </p>
+                <div id="cname">
+                    <h3>University
+                        <button type="button" data-target="#myModaleditEdu" class="btn btn-default btn-sm" class="btn pull-right" data-toggle="modal">
+          <span class="glyphicon glyphicon-pencil"></span>
+        </button>
+                    </h3>
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModaleditEdu" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <!--<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog"> -->
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header" style="padding:35px 50px;">
+
+                                    <h2 class="modal-title"><b>Update Education</b>
+
+                                    </h2>
+
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <h4>
+                                                <label for="recipient-name" class="form-control-label">Degree Name</label>
+                                                <input type="text" class="form-control" id="desId" value="">
+                                            </h4>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <h4>
+                                                <label for="recipient-name" class="form-control-label">University</label>
+                                                <input type="text" class="form-control" id="comId" value="">
+                                            </h4>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <h4>
+                                                <label for="recipient-name" class="form-control-label">Percentage</label>
+                                                <input type="text" class="form-control" id="timeName" value="">
+                                            </h4>
+                                        </div>
+                                        <div class="form-group">
+                                            <h4>
+                                                <label for="recipient-name" class="form-control-label">Year of passing</label>
+                                                <input type="number" class="form-control" id="yearId" value="">
+                                            </h4>
+                                        </div>
+
+                                    </form>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-success" data-dismiss="submit">Save</button>
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <span>Degree</span><br>
+                    <span>Percentage</span><br>
+                    <span>Year of Passing</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--   ***********************Accomplishment********************* -->
+    <div id="accomplishment" class="alert ">
+        <h3>Accomplishment</h3>
+        <div class="card">
+
+            <!--   ***********************Certification********************* -->
+            <div id="certification" class="card-body">
+                <div id="cername">
+
+                    <h3>Certification
+                        <span><a href="#myModalCerti" class="btn btn-default btn-sm" class="btn pull-right" data-toggle="modal">
+          <span class="glyphicon glyphicon-plus" ></span></a>
+                        </span>
+                    </h3>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModalCerti" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <!--<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog"> -->
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header" style="padding:35px 50px;">
+
+                                    <h2 class="modal-title"><b>Add Certification</b>
+
+                                    </h2>
+
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <h4>
+                                                <label for="recipient-name" class="form-control-label">Name</label>
+                                                <input type="text" class="form-control" id="CertNameId" value="">
+                                            </h4>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <h4>
+                                                <label for="recipient-name" class="form-control-label">Issued By</label>
+                                                <input type="text" class="form-control" id="issueById" value="">
+                                            </h4>
+                                        </div>
+                                        <div class="form-group">
+                                            <h4>
+                                                <label for="recipient-name" class="form-control-label">Year</label>
+                                                <input type="number" class="form-control" id="CertYearId" value="">
+                                            </h4>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-success" data-dismiss="submit">Save</button>
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <span>Name
+                        <button type="button" class="btn btn-default btn-sm" class="btn pull-right" data-target="#myModaleditCert" data-toggle="modal">
+          <span class="glyphicon glyphicon-pencil"></span>
+
+                    </button>
+                    </span>
+                    <!-- Modal -->
+                    <div class="modal fade" id="myModaleditCert" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <!--<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog"> -->
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                <div class="modal-header" style="padding:35px 50px;">
+
+                                    <h2 class="modal-title"><b>Update Certification</b>
+
+                                    </h2>
+
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <h4>
+                                                <label for="recipient-name" class="form-control-label">Name</label>
+                                                <input type="text" class="form-control" id="CertNameId" value="">
+                                            </h4>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <h4>
+                                                <label for="recipient-name" class="form-control-label">Issued By</label>
+                                                <input type="text" class="form-control" id="issueById" value="">
+                                            </h4>
+                                        </div>
+                                        <div class="form-group">
+                                            <h4>
+                                                <label for="recipient-name" class="form-control-label">Year</label>
+                                                <input type="number" class="form-control" id="CertYearId" value="">
+                                            </h4>
+                                        </div>
+                                    </form>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button type="submit" class="btn btn-success" data-dismiss="submit">Save Changes</button>
+                                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <br>
+                    <span>Issued By</span><br>
+                    <span>Year of certification</span>
+                </div>
+            </div>
+        </div>
+
+
+        <!--   ***********************Award********************* -->
+        <div id="awards">
+            <div class="card">
+                <div id="certification" class="card-body">
+                    <div id="cername">
+                        <h3>Awards
+                            <span><a href="#myModalAward" class="btn btn-default btn-sm" class="btn pull-right" data-toggle="modal">
+          <span class="glyphicon glyphicon-plus" ></span></a>
+                            </span>
+                        </h3>
+
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="myModalAward" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <!--<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog"> -->
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header" style="padding:35px 50px;">
+
+                                        <h2 class="modal-title"><b>Add Award</b>
+
+                                        </h2>
+
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <h4>
+                                                    <label for="recipient-name" class="form-control-label">Name</label>
+                                                    <input type="text" class="form-control" id="AwardNameId" value="">
+                                                </h4>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <h4>
+                                                    <label for="recipient-name" class="form-control-label">Awarded By</label>
+                                                    <input type="text" class="form-control" id="AwardedById" value="">
+                                                </h4>
+                                            </div>
+                                            <div class="form-group">
+                                                <h4>
+                                                    <label for="recipient-name" class="form-control-label">Year</label>
+                                                    <input type="number" class="form-control" id="AwardYearId" value="">
+                                                </h4>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="submit" class="btn btn-success" data-dismiss="submit">Save</button>
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <span>Name
+                            <button type="button" class="btn btn-default btn-sm" class="btn pull-right" data-toggle="modal" data-target="#myModaleditAward">
+          <span class="glyphicon glyphicon-pencil"></span>
+                        </button>
+                        </span>
+                        <!-- Modal -->
+                        <div class="modal fade" id="myModaleditAward" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <!--<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog"> -->
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header" style="padding:35px 50px;">
+
+                                        <h2 class="modal-title"><b>Update Award</b>
+
+                                        </h2>
+
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <h4>
+                                                    <label for="recipient-name" class="form-control-label">Name</label>
+                                                    <input type="text" class="form-control" id="CertNameId" value="">
+                                                </h4>
+                                            </div>
+
+                                            <div class="form-group">
+                                                <h4>
+                                                    <label for="recipient-name" class="form-control-label">Awarded By</label>
+                                                    <input type="text" class="form-control" id="issueById" value="">
+                                                </h4>
+                                            </div>
+                                            <div class="form-group">
+                                                <h4>
+                                                    <label for="recipient-name" class="form-control-label">Year</label>
+                                                    <input type="number" class="form-control" id="CertYearId" value="">
+                                                </h4>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="submit" class="btn btn-success" data-dismiss="submit">Save Changes</button>
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                        </div><br>
+                        <span>Awarded By</span><br>
+                        <span>Year of award</span>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- *********************************Publication ************************ -->
+            <div id="publication">
+                <div class="card">
+                    <div id="publication" class="card-body">
+                        <div id="pubname">
+                            <h3>Publication
+                                <span><a href="#myModalPubli" class="btn btn-default btn-sm" class="btn pull-right" data-toggle="modal">
+          <span class="glyphicon glyphicon-plus" ></span></a>
+                                </span>
+                            </h3>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="myModalPubli" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <!--<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog"> -->
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header" style="padding:35px 50px;">
+
+                                            <h2 class="modal-title"><b>Add Publication</b>
+
+                                            </h2>
+
+                                        </div>
+                                        <div class="modal-body">
+                                            <form>
+                                                <div class="form-group">
+                                                    <h4>
+                                                        <label for="recipient-name" class="form-control-label">Name</label>
+                                                        <input type="text" class="form-control" id="AwardNameId" value="">
+                                                    </h4>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <h4>
+                                                        <label for="recipient-name" class="form-control-label">Topic</label>
+                                                        <input type="text" class="form-control" id="TopicId" value="">
+                                                    </h4>
+                                                </div>
+                                                <div class="form-group">
+                                                    <h4>
+                                                        <label for="recipient-name" class="form-control-label">Published By</label>
+                                                        <input type="text" class="form-control" id="PublishedById" value="">
+                                                    </h4>
+                                                </div>
+                                                <div class="form-group">
+                                                    <h4>
+                                                        <label for="recipient-name" class="form-control-label">Year</label>
+                                                        <input type="number" class="form-control" id="PublishedYearId" value="">
+                                                    </h4>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                        <div class="modal-footer">
+                                            <button type="submit" class="btn btn-success" data-dismiss="submit">Save</button>
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                            <span>Name
+                                <button type="button" class="btn btn-default btn-sm" class="btn pull-right" data-target="#myModaleditPubli" data-toggle="modal">
+          <span class="glyphicon glyphicon-pencil"></span>
+                            </button>
+                            </span>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="myModaleditPubli" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <!--<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog"> -->
+                                    <!-- Modal content-->
+                                    <div class="modal-content">
+                                        <div class="modal-header" style="padding:35px 50px;">
+
+                                            <h2 class="modal-title"><b>Update Publication</b>
+
+                                            </h2>
+
+                                        </div>
+                                        <div class="modal-body">
+                                            <form>
+                                                <div class="form-group">
+                                                    <h4>
+                                                        <label for="recipient-name" class="form-control-label">Name</label>
+                                                        <input type="text" class="form-control" id="AwardNameId" value="">
+                                                    </h4>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <h4>
+                                                        <label for="recipient-name" class="form-control-label">Topic</label>
+                                                        <input type="text" class="form-control" id="TopicId" value="">
+                                                    </h4>
+                                                </div>
+                                                <div class="form-group">
+                                                    <h4>
+                                                        <label for="recipient-name" class="form-control-label">Published By</label>
+                                                        <input type="text" class="form-control" id="PublishedById" value="">
+                                                    </h4>
+                                                </div>
+                                                <div class="form-group">
+                                                    <h4>
+                                                        <label for="recipient-name" class="form-control-label">Year</label>
+                                                        <input type="number" class="form-control" id="PublishedYearId" value="">
+                                                    </h4>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                        <div class="modal-footer">
+                                            <button type="submit" class="btn btn-success" data-dismiss="submit">Save Changes</button>
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                        </div>
+
+
+                                    </div>
+
+                                </div>
+                            </div><br>
+                            <span>Topic</span><br>
+                            <span>Published By</span><br>
+                            <span>Year</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- *********************************Skills**************************** -->
+        <div id="skills">
+            <div class="card">
+                <div id="skills" class="card-body">
+                    <div id="skillname">
+                        <h3>Skills
+                            <span><a href="#myModalSkill" class="btn btn-default btn-sm" class="btn pull-right" data-toggle="modal">
+          <span class="glyphicon glyphicon-plus" ></span></a>
+                            </span>
+                        </h3>
+                        <!-- Modal -->
+                        <div class="modal fade" id="myModalSkill" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <!--<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog"> -->
+                                <!-- Modal content-->
+                                <div class="modal-content">
+                                    <div class="modal-header" style="padding:35px 50px;">
+
+                                        <h2 class="modal-title"><b>Add Skills</b>
+
+                                        </h2>
+
+                                    </div>
+                                    <div class="modal-body">
+                                        <form>
+                                            <div class="form-group">
+                                                <h4>
+                                                    <label for="recipient-name" class="form-control-label">Add Skills</label>
+                                                    <input type="text" class="form-control" id="skillId" value="">
+                                                </h4>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <div class="modal-footer">
+                                        <button type="submit" class="btn btn-success" data-dismiss="submit">Save</button>
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div id="endorsement">
+                            <span>Endorsed By</span><br>
+                            <span>Comment</span><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
